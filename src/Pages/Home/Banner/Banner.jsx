@@ -1,5 +1,6 @@
 import React from 'react';
-// ami
+//  1 1
+//  1 1
 
 const Banner = () => {
     return (
