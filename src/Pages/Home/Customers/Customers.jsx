@@ -17,7 +17,7 @@ const Customers = () => {
           What our customers are saying
         </h2>
 
-        {/* Description */}
+         {/* Description */}
         <p className="text-gray-500 text-lg leading-8 max-w-3xl mx-auto">
           Enhance posture, mobility, and well-being effortlessly with Posture
           Pro. Achieve proper alignment, reduce pain, and strengthen your body
