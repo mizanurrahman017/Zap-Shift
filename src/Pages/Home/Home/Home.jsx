@@ -7,6 +7,7 @@ import Tracking from '../Tracking/Tracking';
 import Merchant from '../Merchant/Merchant';
 import Customers from '../Customers/Customers';
 import Reviews from '../Reviews/Reviews';
+import Questions from '../Question/Questions';
 
 const reviewsPromise = fetch('/reviews.json').then(res => res.json());
 
@@ -21,6 +22,7 @@ const Home = () => {
             <Merchant></Merchant>
             <Customers></Customers>
             <Reviews reviewsPromise={reviewsPromise}></Reviews>
+            <Questions></Questions>
         </div>
     );
 };
