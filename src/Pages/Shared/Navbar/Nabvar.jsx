@@ -1,14 +1,16 @@
 import React from "react";
+import { NavLink } from "react-router";
 import { FaArrowUp } from "react-icons/fa6";
 
 const Navbar = () => {
   const links = [
-    { name: "Services", path: "#" },
-    { name: "Coverage", path: "#" },
-    { name: "About Us", path: "#" },
-    { name: "Pricing", path: "#" },
-    { name: "Blog", path: "#" },
-    { name: "Contact", path: "#" },
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Coverage", path: "/coverage" },
+    { name: "About Us", path: "/about" },
+    { name: "Pricing", path: "/pricing" },
+    { name: "Blog", path: "/blog" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -16,42 +18,58 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto bg-white rounded-2xl px-8 py-4 flex items-center justify-between shadow-sm">
 
         {/* Logo */}
-        <div className="flex items-center">
-            
+        <NavLink to="/" className="flex items-center gap-3">
           <img
             src="/src/assets/logo.png"
             alt="ZapShift Logo"
             className="h-10 object-contain"
           />
-          <h3 className="f">ZapShift</h3>
-        </div>
+          <h3 className="text-2xl font-bold text-[#0C3D46]">
+            ZapShift
+          </h3>
+        </NavLink>
 
         {/* Menu */}
         <nav className="hidden lg:flex items-center gap-10">
           {links.map((link) => (
-            <a
+            <NavLink
               key={link.name}
-              href={link.path}
-              className="text-gray-600 hover:text-lime-500 transition duration-300 font-medium"
+              to={link.path}
+              className={({ isActive }) =>
+                `font-medium transition duration-300 ${
+                  isActive
+                    ? "text-lime-500"
+                    : "text-gray-600 hover:text-lime-500"
+                }`
+              }
             >
               {link.name}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
         {/* Buttons */}
         <div className="flex items-center gap-4">
-          <button className="border border-gray-300 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition">
+          <NavLink
+            to="/signin"
+            className="border border-gray-300 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition"
+          >
             Sign In
-          </button>
+          </NavLink>
 
-          <button className="bg-lime-300 px-8 py-3 rounded-xl font-semibold hover:bg-lime-400 transition">
+          <NavLink
+            to="/signup"
+            className="bg-lime-300 px-8 py-3 rounded-xl font-semibold hover:bg-lime-400 transition"
+          >
             Sign Up
-          </button>
+          </NavLink>
 
-          <button className="w-12 h-12 rounded-full bg-[#222222] text-lime-300 flex items-center justify-center hover:rotate-45 transition duration-300">
+          <NavLink
+            to="/contact"
+            className="w-12 h-12 rounded-full bg-[#222222] text-lime-300 flex items-center justify-center hover:rotate-45 transition duration-300"
+          >
             <FaArrowUp className="rotate-45" />
-          </button>
+          </NavLink>
         </div>
       </div>
     </header>
