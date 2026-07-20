@@ -12,6 +12,7 @@ const Navbar = () => {
     { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
   ];
+  // ami
 
   return (
     <header className="py-6 bg-[#E9E9E9]">
