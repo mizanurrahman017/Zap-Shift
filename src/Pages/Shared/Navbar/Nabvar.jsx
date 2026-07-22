@@ -12,10 +12,7 @@ const Navbar = () => {
     { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
   ];
-  // ami
-   // ami 
-    // ami
-
+  
   return (
     <header className="py-6 bg-[#E9E9E9]">
       <div className="max-w-7xl mx-auto bg-white rounded-2xl px-8 py-4 flex items-center justify-between shadow-sm">
