@@ -1,8 +1,7 @@
 import React from 'react';
 // ami
 // ami
-// ami
-// ami
+
 const Register = () => {
     return (
         <div>
