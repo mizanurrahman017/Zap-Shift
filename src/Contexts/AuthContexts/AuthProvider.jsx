@@ -1,6 +1,7 @@
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
 import { auth } from '../../Firebase/Firebase.init';
+// ami
 
 const AuthProvider = ({children}) => {
     const registerUser = (email,password) =>{

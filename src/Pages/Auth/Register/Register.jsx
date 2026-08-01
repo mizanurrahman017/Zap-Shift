@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import useAuth from '../../../Hooks/useAuth';
 
 
 const Register = () => {
@@ -8,6 +9,8 @@ const Register = () => {
 
 
     const { register,showPassword, setShowPassword ,handleSubmit, formState: { errors }, } = useForm();
+
+    const {registerUser} = useAuth();
 
     const handleRegistration = (data) => {
         console.log('after register', data);
